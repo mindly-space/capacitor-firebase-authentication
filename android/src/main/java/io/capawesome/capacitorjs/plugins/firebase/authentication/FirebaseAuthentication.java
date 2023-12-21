@@ -525,7 +525,7 @@ public class FirebaseAuthentication {
                     }else{
                         Exception exception = task.getException();
                         Log.e(FirebaseAuthenticationPlugin.TAG, "updateEmail failed.", exception);
-                        call.reject(exception);
+                        call.reject(exception.getMessage());
                     }
                 }
             );
